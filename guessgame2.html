@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alina's Guessing Game</title>
+    <style type="text/css">
+      body {
+        background-color: lightblue;}
+      .wrapper {
+  margin: 40px;}
+      header {
+        background-color: #A0D6B4;
+  font-family: Helvetica;
+        font-size: 30px;}
+      /* // Play Button //
+      #play {
+        height: 50px;
+  width: 50px;
+        border-radius: 10px;
+        background-color: white;
+        border-color: pink;}*/
+      nav ul {
+        padding: 10px;}
+      nav li {
+        display: inline;
+        padding-left: 10px;
+        font-size: 18px;}
+      h1, h2, p, li, a {
+        font-family: sans-serif;
+        color: white;
+        text-decoration: none;}
+      a:visited {
+        color: white;}
+      a:hover {
+        color: pink;}
+      footer {
+        text-align: center;
+        font-family: sans-serif;
+        color: white;}
+    </style>
+  </head>
+  <body>
+<div class="wrapper">
+      <header>
+      <h1>Alina's Guessing Game</h1>
+        <!-- // Play Button //
+        <button id="play" onclick="guessingGame()">Let's play!</button>
+        -->
+      <nav>
+        <ul>
+          <li>(links)</li>
+          <li><a href="http://www.helloalinato.com/" target="_blank">see hello</a></li>
+          <li><a href="http://violinalina.tumblr.com/" target="_blank">see music</a></li>
+          <li><a href="mailto:alina.to@gmail.com" target="_top">say hello</a></li>
+        </ul>
+        </nav>
+      </header>
+
+      <section>
+        <article>
+          <h2>About Me</h2>
+          <p>My name is Alina To. I'm a freelance violinist, ex-university English faculty, and aspiring web developer. I've been living on the same block in the Capitol Hill neighborhood in 3 different buildings (4 different units) for 10 years. I love my neightbors and my neighborhood, although I don't love all the recent developments. When I'm not complaining on the sidewalk with my neighbors about the extreme rent increase like we're New Yorkers, I'm performing around town in different groups at different venues.</p>
+        </article>
+        <article>
+          <h2>Goals</h2>
+          <p>I hope to learn and practice as much as I can from this course, take a few more courses, and land a job as a front-end web developer (while maintaining my music life). I've been studying by myself and playing around, and hope to completely revamp my personal music website.</p>
+          <ul>
+            <li><a href="http://www.helloalinato.com" target="_blank">Hello Alina To</a></li>
+            <li><a href="http://violinalina.tumblr.com" target="_blank">Violin Page</a></li>
+          </ul>
+          <p>This stuff is hard!</p>
+        </article>
+        <article>
+          <h2>Food</h2>
+          <p>I'm a big food fan. I like cooking it and I like eating it. I also like traveling to eat it in a different timezone and different climate.<br />
+          My top 3 recent favorite food experiences:</p>
+          <ol>
+            <li>Hitsumaboshi in Nagoya</li>
+            <li>Birthday cake from Bakery Nouveau</li>
+            <li>Sushi in Kanazawa</li>
+          </ol>
+        </article>
+      </section>
+
+      <footer>
+      &copy; 2015 Alina's Guessing Game
+      </footer>
+    </div>
+
+  <script>
+  var message;
+  function guessingGame(answer) {
+    var guitarists;
+    alert("How many guitarists does it take to change a lightbulb?");
+
+    guitarists = prompt("Think of a number between 1 - 10 shredding guitarists.");
+    if (guitarists > answer) {
+      return guitarists + "?? Waaay too many.";
+      guessingGame();
+    } else if (guitarists < answer) {
+      return "We need a few more than " + guitarists + " guitarists! Too low.";
+      guessingGame();
+    } else if (guitarists == answer) {
+      return "You got it, dude! 1 to change it, and the rest to stand around saying 'Psh, I could've done that'.";
+    }
+  };
+
+  message = guessingGame(7);
+  alert(message);
+  </script>
+  </body>
+</html>

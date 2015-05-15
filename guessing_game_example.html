@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+var message;
+var guessingGame = function(answer) {
+  var guess, difference;
+  guess = prompt("what's my number?");
+  difference = guess - answer;
+
+  if (guess == answer) {
+    console.log("Blah");
+    return "yup";
+  } else {
+    return "blah, off by " + difference;
+  }
+};
+
+message = guessingGame(4);
+alert(message);
+</script>
+</body>
+</html>
